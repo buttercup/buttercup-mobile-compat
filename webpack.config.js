@@ -1,5 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 const DIST = path.resolve(__dirname, "./dist");
 const SOURCE = path.resolve(__dirname, "source");
@@ -29,8 +31,7 @@ module.exports = {
                 use: "babel-loader",
                 include: [
                     ...paths
-                ],
-                exclude: NODE_MODULES
+                ]
             }
         ]
     },
@@ -44,6 +45,13 @@ module.exports = {
         filename: "[name].js",
         pathinfo: true
     },
+
+    plugins: [
+        new LodashModuleReplacementPlugin(),
+        new UglifyJSPlugin({
+            warningsFilter: () => false
+        })
+    ],
 
     resolve: {
         extensions: [".js"],
