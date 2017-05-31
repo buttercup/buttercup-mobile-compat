@@ -29,7 +29,8 @@ module.exports = {
                 use: "babel-loader",
                 include: [
                     ...paths
-                ]
+                ],
+                exclude: NODE_MODULES
             }
         ]
     },
