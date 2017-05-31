@@ -1,0 +1,28 @@
+{
+  "name": "@buttercup/mobile-compat",
+  "version": "0.1.0",
+  "description": "Compiled library bundle for Buttercup's mobile platform",
+  "main": "source/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buttercup/buttercup-mobile-compat.git"
+  },
+  "keywords": [
+    "buttercup",
+    "mobile",
+    "compatibility",
+    "library",
+    "dropbox",
+    "webdav",
+    "fs"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buttercup/buttercup-mobile-compat/issues"
+  },
+  "homepage": "https://github.com/buttercup/buttercup-mobile-compat#readme"
+}
