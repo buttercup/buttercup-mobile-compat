@@ -43,7 +43,9 @@ module.exports = {
     output: {
         path: DIST,
         filename: "[name].js",
-        pathinfo: true
+        pathinfo: true,
+        library: "ButtercupMobileCompat",
+        libraryTarget: "commonjs2"
     },
 
     plugins: [
