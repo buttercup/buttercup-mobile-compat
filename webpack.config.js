@@ -21,6 +21,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /iconv/,
+                use: "null-loader"
+            },
+            {
                 test: /\.js$/,
                 use: "babel-loader",
                 include: [
