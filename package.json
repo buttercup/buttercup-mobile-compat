@@ -1,10 +1,11 @@
 {
   "name": "@buttercup/mobile-compat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Compiled library bundle for Buttercup's mobile platform",
   "main": "dist/mobile-compat.js",
   "scripts": {
     "build": "webpack --progress --colors",
+    "prepublish": "npm run build",
     "test": "npm run build"
   },
   "repository": {
@@ -36,7 +37,7 @@
     "lodash-webpack-plugin": "0.11.4",
     "null-loader": "0.1.1",
     "uglifyjs-webpack-plugin": "0.4.3",
-    "webdav-fs": "~1.0.0",
+    "webdav-fs": "~1.1.0",
     "webpack": "^2.6.1"
   }
 }

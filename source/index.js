@@ -7,3 +7,9 @@ export default {
     createWebDAVAdapter,
     createAnyFSAdapter
 };
+
+export {
+    createDropboxAdapter,
+    createWebDAVAdapter,
+    createAnyFSAdapter
+};

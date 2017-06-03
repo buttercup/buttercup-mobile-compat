@@ -6,13 +6,13 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const DIST = path.resolve(__dirname, "./dist");
 const SOURCE = path.resolve(__dirname, "source");
 const NODE_MODULES = path.resolve(__dirname, "node_modules");
-const paths = [
-    SOURCE,
-    path.resolve(__dirname, "node_modules/dropbox-fs"),
-    path.resolve(__dirname, "node_modules/webdav-fs"),
-    path.resolve(__dirname, "node_modules/webdav-client"),
-    path.resolve(__dirname, "node_modules/any-fs")
-];
+// const paths = [
+//     SOURCE,
+//     path.resolve(__dirname, "node_modules/dropbox-fs"),
+//     path.resolve(__dirname, "node_modules/webdav-fs"),
+//     path.resolve(__dirname, "node_modules/webdav-client"),
+//     path.resolve(__dirname, "node_modules/any-fs")
+// ];
 
 module.exports = {
 
@@ -28,10 +28,10 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                use: "babel-loader",
-                include: [
-                    ...paths
-                ]
+                use: "babel-loader"
+                // include: [
+                //     ...paths
+                // ]
             }
         ]
     },
@@ -43,7 +43,6 @@ module.exports = {
     output: {
         path: DIST,
         filename: "[name].js",
-        pathinfo: true,
         library: "ButtercupMobileCompat",
         libraryTarget: "commonjs2"
     },
@@ -51,6 +50,7 @@ module.exports = {
     plugins: [
         new LodashModuleReplacementPlugin(),
         new UglifyJSPlugin({
+            comments: false,
             warningsFilter: () => false
         })
     ],

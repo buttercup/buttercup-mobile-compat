@@ -1,1 +1,7 @@
+.history
+.vscode
 source
+node_modules
+.babelrc
+stats.json
+webpack.config.js
