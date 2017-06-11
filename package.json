@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "prepublish": "npm run build",
+    "pub": "np",
     "test": "npm run build"
   },
   "repository": {
