@@ -1,5 +1,11 @@
 # Buttercup Mobile Compat
 
+## v0.6.1
+_2017-09-12_
+
+ * Upgrade `any-fs` to 0.4.1
+   * Fix invalid call to dropbox-fs writeFile
+
 ## v0.6.0
 _2017-07-05_
 
