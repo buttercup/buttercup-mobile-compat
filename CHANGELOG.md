@@ -1,5 +1,10 @@
 # Buttercup Mobile Compat
 
+## v0.7.0
+_2018-05-27_
+
+ * Update WebDAV-fs to 1.10.1
+
 ## v0.6.1
 _2017-09-12_
 
